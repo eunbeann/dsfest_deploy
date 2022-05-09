@@ -5,7 +5,7 @@ import styles from "../css/Board.module.css";
 import HeaderTitle from "../components/HeaderTitle";
 import axios from "axios";
 
-const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001' 
+const URL = process.env.NODE_ENV === 'production' ? 'http://54.180.13.88/3001' : 'http://localhost:3001' 
 
 const Board = () => {
   const [texts, setTexts] = useState([]);
