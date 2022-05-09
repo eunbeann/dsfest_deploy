@@ -74,7 +74,7 @@ const BoardInsert = ({ texts, changeTexts }) => {
 
   return (
     <div className={insertBody}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} method="GET">
         <textarea
           className={insert}
           placeholder="소감을 남겨주세요!"
