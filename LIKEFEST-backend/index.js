@@ -1,7 +1,6 @@
 const http = require('http');
 const express = require('express');
 const app = express();
-const server = createServer(app);
 const cors = require('cors');
 const bodyParser = require('body-Parser');
 
@@ -27,12 +26,12 @@ const noticeRouter = require('./routes/Notice');
 
 app.use(express.static("uploads"));
 
-app.use("/board", boardRouter);
-app.use("/notice", noticeRouter);
+app.use("/api/board", boardRouter);
+app.use("/api/notice", noticeRouter);
 
 
 db.sequelize.sync().then(() => {
-    server.listen(PORT, () => {
+    app.listen(PORT, () => {
         console.log(`Server running on ${PORT}`);
     });
 });
