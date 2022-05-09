@@ -3,7 +3,7 @@ import React, { useCallback, useState } from "react";
 import styles from "../css/Board.module.css";
 import { useNavigate } from "react-router-dom";
 
-const URL = process.env.NODE_ENV === 'production' ? 'http://54.180.13.88/3001' : 'http://localhost:3001' 
+const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001' 
 
 const BoardInsert = ({ texts, changeTexts }) => {
   const [insertBody, setInsertBody] = useState(styles.insertBody);
