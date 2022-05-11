@@ -2,7 +2,7 @@ const http = require('http');
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const bodyParser = require('body-Parser');
+// const bodyParser = require('body-Parser');
 
 const PORT = 3001;
 

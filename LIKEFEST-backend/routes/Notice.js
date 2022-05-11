@@ -3,9 +3,9 @@ const router = express.Router();
 const { Notice } = require("../models");
 const multer = require("multer");
 const fs = require("fs");
-const bodyParser = require("body-Parser");
+// const bodyParser = require("body-Parser");
 
-router.use(bodyParser.json());
+// router.use(bodyParser.json());
 
 router.get("/", async (req, res) => {
   const listOfNotice = await Notice.findAll();

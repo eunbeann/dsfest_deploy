@@ -16,7 +16,7 @@ const Board = () => {
 
   useEffect(() => {
     axios
-      .get(URL)
+      .get("http://localhost:3001/board")
       .then((res) => {
         setTexts(res.data);
       })
