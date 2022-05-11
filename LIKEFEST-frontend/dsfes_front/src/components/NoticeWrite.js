@@ -189,7 +189,7 @@ console.log(Title, Content, Tag, noImg);
 
       axios
         .post(
-          "http://localhost:3001/notice",
+          "http://54.180.13.88/api/notice",
           // noTitle:formData.get('title'),
           // noText:formData.get('content'),
           // noTag:formData.get('tag')

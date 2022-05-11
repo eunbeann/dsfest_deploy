@@ -7,7 +7,7 @@ const NoticeList = () => {
   // 데이터 불러오기
   useEffect(() => {
     axios
-      .get("http://localhost:3001/notice")
+      .get("http://54.180.13.88/api/notice")
       .then((res) => {
         setContents(res.data);
       })

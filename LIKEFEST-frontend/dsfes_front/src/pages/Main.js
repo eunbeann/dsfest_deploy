@@ -30,7 +30,7 @@ const Main = () => {
           <p>함께하는 <span>새로고침</span></p>
         </div>
         <div data-aos="fade-up" className={style.LinkComponent}>
-        <Link className={style.link} to="/event">
+        <Link className={style.link} to="/Event">
           <img className={style.representativeImg} src={find_duksae}/>
           <div className={style.representativeTitle1}>
             <div>
@@ -43,7 +43,7 @@ const Main = () => {
 
         </div>
         <div data-aos="fade-up" className={style.LinkComponent}>
-        <Link className={style.link} to="/board">
+        <Link className={style.link} to="/Board">
           <img className={style.representativeImg} src={gestbook}/>
           <div className={style.representativeTitle2}>
             <p>함께하여 더 즐거운 이야기들</p>
