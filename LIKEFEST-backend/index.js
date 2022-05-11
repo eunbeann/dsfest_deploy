@@ -24,7 +24,7 @@ const db = require('./models');
 const boardRouter = require('./routes/Board');
 const noticeRouter = require('./routes/Notice');
 
-app.use(express.static("uploads"));
+app.use('/uploads',express.static("uploads"));
 
 app.use("/api/board", boardRouter);
 app.use("/api/notice", noticeRouter);
