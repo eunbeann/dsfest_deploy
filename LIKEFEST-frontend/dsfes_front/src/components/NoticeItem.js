@@ -17,7 +17,7 @@ const NoticeItem = ({ content }) => {
     const img_url = [];
     for (let i = 8; i < hope.length; i++) {
       img_url.push(String.fromCharCode(hope[i]));
-      setImgurl("http://54.180.13.88/api" + img_url.join(""));
+      setImgurl("http://54.180.13.88/api/" + img_url.join(""));
     }
   }, []);
 
