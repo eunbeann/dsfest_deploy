@@ -17,7 +17,7 @@
     "username": "hinhyu",
     "password": "dlseldi46",
     "database": "dsfest",
-    "host": "dsfest.c08dc6yurzri.ap-northeast-2.rds.amazonaws.com",
+    "host": "dsfest-db.c08dc6yurzri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "port":"3306"
   }
