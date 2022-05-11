@@ -7,7 +7,7 @@ const fs = require("fs");
 
 // router.use(bodyParser.json());
 
-router.get("/", async (req, res) => {
+router.get("/uploads", async (req, res) => {
   const listOfNotice = await Notice.findAll();
   res.json(listOfNotice);
 });
