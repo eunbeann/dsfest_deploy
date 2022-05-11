@@ -117,6 +117,7 @@ const NoticeWrite = () => {
   }, [tag3]);
 
   const handleChange = (e) => {
+    e.preventDefault();
     const {
       target: { name, value },
     } = e;
@@ -129,7 +130,6 @@ const NoticeWrite = () => {
     }else if(name === 'noImg'){
       setImg(URL.createObjectURL(e.target.files[0]));  
       setimg(e.target.files[0]);  
-    
     }    
 console.log(Title, Content, Tag, noImg);
 }
