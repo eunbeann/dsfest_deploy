@@ -173,7 +173,6 @@ const Menubar = () => {
           </div>
         </div>
         <div className={styles.AdBanner}>
-          <img src={googleADs} />
         </div>
       </div>
     </div>
