@@ -15,7 +15,7 @@ const Board = () => {
 
   useEffect(() => {
     axios
-      .get(URL + "/board")
+      .get(URL + "/api/board")
       .then((res) => {
         setTexts(res.data);
       })
