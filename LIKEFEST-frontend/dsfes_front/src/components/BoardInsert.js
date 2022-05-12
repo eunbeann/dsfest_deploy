@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useCallback, useState } from "react";
 import styles from "../css/Board.module.css";
 import { useNavigate } from "react-router-dom";
-const URL = process.env.NODE_ENV === 'production' ? 'http://dswu2022f5.site/' : 'http://localhost:3000/';
+const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
 
 const BoardInsert = ({ texts, changeTexts }) => {
   const [insertBody, setInsertBody] = useState(styles.insertBody);
@@ -36,7 +36,7 @@ const BoardInsert = ({ texts, changeTexts }) => {
     (e) => {
       e.preventDefault();
       axios
-        .post(URL, {
+        .post(URL + "/board", {
           boText: text,
         })
         .then((res) => {
@@ -55,6 +55,7 @@ const BoardInsert = ({ texts, changeTexts }) => {
         })
         .catch((error) => {
           console.log("Network Error : ", error);
+          console.log(">>>>>> URL " +URL);
         });
     },
     [changeTexts, text, texts]

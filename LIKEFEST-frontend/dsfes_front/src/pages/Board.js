@@ -4,7 +4,7 @@ import BoardList from "../components/BoardList";
 import styles from "../css/Board.module.css";
 import HeaderTitle from "../components/HeaderTitle";
 import axios from "axios";
-const URL = process.env.NODE_ENV === 'production' ? 'http://dswu2022f5.site/' : 'http://localhost:3000/';
+const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
 
 const Board = () => {
   const [texts, setTexts] = useState([]);
@@ -15,11 +15,14 @@ const Board = () => {
 
   useEffect(() => {
     axios
-      .get(URL)
+      .get(URL + "/board")
       .then((res) => {
         setTexts(res.data);
       })
-      .catch((error) => console.log("Network Error : ", error));
+      .catch((error) => {
+        console.log("Network Error : ", error);
+        console.log(">>>>>> URL " + URL);
+      });
   }, []);
 
   return (

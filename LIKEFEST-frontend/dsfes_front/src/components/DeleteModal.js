@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styles from "../css/Modal.module.css";
 import { animated } from "react-spring";
 import axios from "axios";
-//const URLN = process.env.NODE_ENV === 'production'?'http://54.180.13.88/api/notice':'http://localhost:3000/';
+const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
 
 //삭제 모달창 입니다.
 const DeleteModal = ({ style, closeModal, content }) => {
