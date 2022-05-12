@@ -3,6 +3,7 @@ import styles from "../css/Notice.Write.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import plus from "../img/plus.png";
+const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
 
 const NoticeWrite = () => {
   const [Title, setTitle] = useState(null);
@@ -189,7 +190,7 @@ console.log(Title, Content, Tag, noImg);
 
       axios
         .post(
-          "http://dswu2022f5.site/api/notice",
+          URL+"/api/notice",
           // noTitle:formData.get('title'),
           // noText:formData.get('content'),
           // noTag:formData.get('tag')

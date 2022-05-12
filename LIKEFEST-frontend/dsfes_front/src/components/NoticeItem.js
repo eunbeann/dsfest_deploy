@@ -8,6 +8,7 @@ import icon_close from "../img/icon_close.png";
 import button_edit from "../img/button_edit.png";
 import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
+const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
 
 const NoticeItem = ({ content }) => {
   // 이미지 추가 태영언니는 신입니다.
@@ -17,7 +18,7 @@ const NoticeItem = ({ content }) => {
     const img_url = [];
     for (let i = 8; i < hope.length; i++) {
       img_url.push(String.fromCharCode(hope[i]));
-      setImgurl("http://dswu2022f5.site/uploads/" + img_url.join(""));
+      setImgurl(URL + "/uploads/" + img_url.join(""));
     }
   }, []);
 

@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../css/Notice.Write.module.css";
 import axios from "axios";
+const URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
 
 const NoticeUpdate = () => {
   const location = useLocation();
@@ -145,7 +146,7 @@ const NoticeUpdate = () => {
     console.log("버튼 눌리는 중");
     if (noTitle !== null && noText !== null && noTag !== null) {
       axios
-        .put(`http://dswu2022f5.site/api/notice/update/${id}`, content)
+        .put(`${URL}/api/notice/update/${id}`, content)
         .then((res) => {
           console.log(content);
           console.log("수정 완료");
