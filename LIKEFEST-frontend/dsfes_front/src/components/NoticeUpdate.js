@@ -145,7 +145,7 @@ const NoticeUpdate = () => {
     console.log("버튼 눌리는 중");
     if (noTitle !== null && noText !== null && noTag !== null) {
       axios
-        .put(`http://54.180.13.88/api/notice/update/${id}`, content)
+        .put(`http://dswu2022f5.site/api/notice/update/${id}`, content)
         .then((res) => {
           console.log(content);
           console.log("수정 완료");

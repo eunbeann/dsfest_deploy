@@ -11,7 +11,7 @@ const DeleteModal = ({ style, closeModal, content }) => {
     const id = content.id;
     // 데이터 삭제
     axios
-      .delete(`http://54.180.13.88/api/notice/${id}`)
+      .delete(`http://dswu2022f5.site/api/notice/${id}`)
       .then((res) => {
         window.location.reload();
         console.log(res);

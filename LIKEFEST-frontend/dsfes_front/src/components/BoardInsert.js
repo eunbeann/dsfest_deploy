@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useCallback, useState } from "react";
 import styles from "../css/Board.module.css";
 import { useNavigate } from "react-router-dom";
-const URLB = process.env.NODE_ENV === 'production' ? 'http://dswu2022f5.site/' : 'http://localhost:3000/';
+//const URLB = process.env.NODE_ENV === 'production' ? 'http://dswu2022f5.site/' : 'http://localhost:3000/';
 const BoardInsert = ({ texts, changeTexts }) => {
   const [insertBody, setInsertBody] = useState(styles.insertBody);
   const [insert, setInsert] = useState(styles.insert);
@@ -35,7 +35,7 @@ const BoardInsert = ({ texts, changeTexts }) => {
     (e) => {
       e.preventDefault();
       axios
-        .post(URLB, {
+        .post("http://dswu2022f5.site/api/board", {
           boText: text,
         })
         .then((res) => {
