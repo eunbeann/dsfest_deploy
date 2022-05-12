@@ -35,7 +35,7 @@ const BoardInsert = ({ texts, changeTexts }) => {
     (e) => {
       e.preventDefault();
       axios
-        .post("http://54.180.13.88/api/board", {
+        .post("http://dswu2022f5.site/api/board", {
           boText: text,
         })
         .then((res) => {

@@ -14,7 +14,7 @@ const Board = () => {
 
   useEffect(() => {
     axios
-      .get("http://54.180.13.88/api/board")
+      .get("http://dswu2022f5.site/api/board")
       .then((res) => {
         setTexts(res.data);
       })
