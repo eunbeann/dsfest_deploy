@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import "../css/reset.css";
 import styles from "../css/Menubar.module.css";
-import googleADs from "../img/GoogleADs.png";
+import googleADs from "../img/GoogleADs1.png";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import FesLogo from "../img/FesLogo.svg";
 import HeaderTitle from "../components/HeaderTitle";
@@ -173,6 +173,7 @@ const Menubar = () => {
           </div>
         </div>
         <div className={styles.AdBanner}>
+          <img src={googleADs} />
         </div>
       </div>
     </div>
