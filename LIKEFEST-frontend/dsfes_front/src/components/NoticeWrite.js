@@ -3,7 +3,8 @@ import styles from "../css/Notice.Write.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import plus from "../img/plus.png";
-const URLB = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
+const URLB =
+  process.env.NODE_ENV === "production" ? "" : "http://localhost:3001";
 
 const NoticeWrite = () => {
   const [Title, setTitle] = useState(null);
@@ -103,12 +104,11 @@ const NoticeWrite = () => {
     }
   };
 
-
   //usememo 최적화 연산 함수
   const textColor1 = useMemo(() => {
     return tag1 ? "#4C966E" : "#c4c4c4";
   }, [tag1]);
-  //tag1가 변화하면 윗줄이 동작함 
+  //tag1가 변화하면 윗줄이 동작함
   const textColor2 = useMemo(() => {
     return tag2 ? "#d0c7de" : "#c4c4c4";
   }, [tag2]);
@@ -126,14 +126,14 @@ const NoticeWrite = () => {
       setTitle(value);
     } else if (name === "content") {
       setContent(value);
-    }else if(name === 'tag'){
+    } else if (name === "tag") {
       setTag(value);
-    }else if(name === 'noImg'){
-      setImg(URL.createObjectURL(e.target.files[0]));  
-      setimg(e.target.files[0]);  
-    }    
-console.log(Title, Content, Tag, noImg);
-}
+    } else if (name === "noImg") {
+      setImg(URL.createObjectURL(e.target.files[0]));
+      setimg(e.target.files[0]);
+    }
+    console.log(Title, Content, Tag, noImg);
+  };
 
   // const tagChange = (e) => {
   //   const {
@@ -190,7 +190,7 @@ console.log(Title, Content, Tag, noImg);
 
       axios
         .post(
-          URLB+"/api/notice",
+          URLB + "/api/notice",
           // noTitle:formData.get('title'),
           // noText:formData.get('content'),
           // noTag:formData.get('tag')
@@ -219,7 +219,11 @@ console.log(Title, Content, Tag, noImg);
 
   return (
     <div className={styles.all}>
-      <form onSubmit={handleSubmit} encType="multipart/form-data">
+      <form
+        className={styles.Mfrom}
+        onSubmit={handleSubmit}
+        encType="multipart/form-data"
+      >
         <div id="ntcItemWrite" className={styles.ntcItemWrite}>
           <input
             placeholder="제목을 입력하세요"
@@ -229,6 +233,7 @@ console.log(Title, Content, Tag, noImg);
             onChange={handleChange}
             name="title"
           ></input>
+          <hr className={styles.titlehr} />
           <textarea
             name="content"
             rows="9"

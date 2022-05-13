@@ -10,16 +10,10 @@
 .body {
   text-align: center;
 }
-.ntcItemWrite {
-  width: 100%;
-  height: 321px;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin-top: 26px;
-  border-radius: 5px;
-  margin-bottom: 19px;
-  border-color: #fff;
+
+.all {
+  /* margin-left: 34px;
+  margin-right: 34px; */
 }
 
 .hashtagContainer {
@@ -91,24 +85,58 @@
   width: 74px;
 }
 
+.ntcItemWrite {
+  padding: 0px;
+  width: 100%;
+  height: 321px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 26px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: 5px;
+  margin-bottom: 19px;
+  border-color: #fff;
+}
+
+/* .titleCover {
+  width: 100%;
+  margin: 0px;
+} */
 .ntcTitle {
-  grid-row: 2/3;
   grid-column: 1/3;
   text-align: left;
   line-height: 21.6px;
   font-size: 18px;
-  /* padding-top: 5px; */
-  margin-top: 19px;
-  margin-left: 23px;
-  margin-right: 23px;
-  font-family: "Pretendard-bold";
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 12px;
+  padding-top: 19px;
+  /* 문제코드 */
+  padding-right: 23px;
+  padding-left: 23px;
+  /* 여기까지 */
+  font-family: "Pretendard";
+  font-weight: 800;
   color: black;
   border: none;
-  font-weight: 700;
-  border-bottom: solid 1px #c4c4c4;
-  padding-bottom: 15px;
 }
 
+.Mfrom {
+  margin-left: 34px;
+  margin-right: 34px;
+}
+.titlehr {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 0px;
+  box-shadow: none;
+  margin-left: 23px;
+  margin-right: 23px;
+}
 .ntcContent {
   white-space: pre-wrap;
   resize: none;
@@ -156,11 +184,6 @@ textarea:focus {
   margin-top: 19px;
   line-height: 19.2px;
   color: #0e1013;
-}
-
-.all {
-  margin-left: 34px;
-  margin-right: 34px;
 }
 
 .plusdiv {

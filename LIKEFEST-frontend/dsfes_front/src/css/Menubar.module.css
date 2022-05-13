@@ -1,5 +1,5 @@
 /* 모바일 환경이 아닐 때 */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .frame {
     width: 412px;
   }
@@ -15,7 +15,7 @@
     left: auto !important;
     right: auto !important;
   }
-}
+} */
 
 .menubar {
   text-align: center;
